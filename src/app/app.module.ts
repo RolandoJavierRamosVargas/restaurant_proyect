@@ -9,11 +9,16 @@ import { SignupComponent } from './login/signup/signup.component';
 import { SharedModule } from './shared/shared.module';
 import { GraficaComponent } from './components/grafica/grafica.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { EmpresaComponent } from './register/empresa/empresa.component';
 import { LadingComponent } from './ladingPage/lading/lading.component';
+import { StepperComponent } from './register/stepper/stepper.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-
-
+import {MatStepperModule} from '@angular/material/stepper';
+import {FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,14 +26,21 @@ import { LadingComponent } from './ladingPage/lading/lading.component';
     SignupComponent,
     GraficaComponent,
     DashboardComponent,
-    EmpresaComponent,
     LadingComponent,
-    
+    StepperComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    BrowserAnimationsModule,
+    MatStepperModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

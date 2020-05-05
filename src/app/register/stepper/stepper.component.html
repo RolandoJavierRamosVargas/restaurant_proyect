@@ -1,0 +1,79 @@
+<div class="container mt-5">
+    <!-- <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+        {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+      </button> -->
+    <mat-horizontal-stepper [linear]="isLinear" #stepper>
+        <mat-step [stepControl]="firstFormGroup" state="phone">
+            <form [formGroup]="firstFormGroup">
+                <ng-template matStepLabel>Registre datos de la Empresa</ng-template>
+                <mat-form-field>
+                    <mat-label>Name</mat-label>
+                    <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+                </mat-form-field>
+                <div>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup">
+            <form [formGroup]="secondFormGroup">
+                <ng-template matStepLabel>Registre categorias y los productos</ng-template>
+                <mat-form-field>
+                    <mat-label>Address</mat-label>
+                    <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
+                </mat-form-field>
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step>
+            <ng-template matStepLabel>FIN</ng-template>
+            <p>You are now done.</p>
+            <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button (click)="stepper.reset()">Reset</button>
+            </div>
+        </mat-step>
+    </mat-horizontal-stepper>
+    <ng-template matStepperIcon="phone">
+        <mat-icon>call_end</mat-icon>
+    </ng-template>
+    <ng-template matStepperIcon="chat">
+        <mat-icon>forum</mat-icon>
+    </ng-template>
+</div>
+
+
+<!-- <mdb-stepper #stepper>
+    <mdb-step name="Step 1" [stepForm]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+            <div class="md-form">
+                <input type="text" class="form-control" mdbInput mdbValidate formControlName="email">
+                <label for="">Email</label>
+                <mdb-error *ngIf="email.invalid && (email.dirty || email.touched)">Input invalid</mdb-error>
+                <mdb-success *ngIf="email.valid && (email.dirty || email.touched)">Input valid</mdb-success>
+            </div>
+        </form>
+        <button mdbBtn size="sm" color="primary" (click)="stepper.next()">CONTINUE</button>
+    </mdb-step>
+    <mdb-step name="Step 2" [stepForm]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+            <div class="md-form">
+                <input type="password" class="form-control" mdbInput mdbValidate formControlName="password">
+                <label for="">Password</label>
+                <mdb-error *ngIf="password.invalid && (password.dirty || password.touched)">Input invalid</mdb-error>
+                <mdb-success *ngIf="password.valid && (password.dirty || password.touched)">Input valid</mdb-success>
+            </div>
+        </form>
+        <button mdbBtn size="sm" color="primary" (click)="stepper.next()">CONTINUE</button>
+        <button mdbBtn size="sm" color="secondary" (click)="stepper.previous()">BACK</button>
+    </mdb-step>
+    <mdb-step name="Step 3" label="Step 3 label">
+        <p class="pl-2">Finish!</p>
+        <div class="step-actions">
+            <button mdbBtn size="sm" color="primary" (click)="onSubmit()">SUBMIT</button>
+        </div>
+    </mdb-step>
+</mdb-stepper> -->
