@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "frontdelivery"
+    }
+  },
+  "defaultProject": "frontdelivery",
+  "cli": {
+    "analytics": false
+  }
 }
