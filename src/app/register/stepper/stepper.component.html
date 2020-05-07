@@ -15,6 +15,7 @@
         <mat-step [stepControl]="secondFormGroup">
             <form [formGroup]="secondFormGroup">
                 <ng-template matStepLabel>Registre categorias y los productos</ng-template>
+                <app-categorias></app-categorias>
                 <mat-form-field>
                     <mat-label>Address</mat-label>
                     <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required>

@@ -20,8 +20,9 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { DatosPersonalesComponent } from './register/datos-personales/datos-personales.component';
-import {MatSelectModule} from '@angular/material/select'; 
-import { MaterialFileInputModule } from 'ngx-material-file-input';
+import {MatSelectModule} from '@angular/material/select';
+import { CategoriasComponent } from './register/categorias/categorias.component'; 
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { MaterialFileInputModule } from 'ngx-material-file-input';
     LadingComponent,
     StepperComponent,
     DatosPersonalesComponent,
+    CategoriasComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,7 +49,7 @@ import { MaterialFileInputModule } from 'ngx-material-file-input';
     MatButtonModule,
     MatIconModule,
     MatSelectModule,
-    MaterialFileInputModule
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
