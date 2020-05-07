@@ -6,10 +6,7 @@
         <mat-step [stepControl]="firstFormGroup" state="phone">
             <form [formGroup]="firstFormGroup">
                 <ng-template matStepLabel>Registre datos de la Empresa</ng-template>
-                <mat-form-field>
-                    <mat-label>Name</mat-label>
-                    <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
-                </mat-form-field>
+                <app-datos-personales></app-datos-personales>
                 <div>
                     <button mat-button matStepperNext>Next</button>
                 </div>
