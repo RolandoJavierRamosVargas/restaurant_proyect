@@ -1,0 +1,11 @@
+div img.card-img{
+    width: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+button.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

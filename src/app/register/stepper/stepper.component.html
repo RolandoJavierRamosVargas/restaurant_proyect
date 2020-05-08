@@ -15,7 +15,9 @@
         <mat-step [stepControl]="secondFormGroup">
             <form [formGroup]="secondFormGroup">
                 <ng-template matStepLabel>Registre categorias y los productos</ng-template>
+
                 <app-categorias></app-categorias>
+
                 <mat-form-field>
                     <mat-label>Address</mat-label>
                     <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
@@ -28,7 +30,9 @@
         </mat-step>
         <mat-step>
             <ng-template matStepLabel>FIN</ng-template>
-            <p>You are now done.</p>
+            
+            <app-fin></app-fin>
+            
             <div>
                 <button mat-button matStepperPrevious>Back</button>
                 <button mat-button (click)="stepper.reset()">Reset</button>

@@ -23,6 +23,7 @@ import { DatosPersonalesComponent } from './register/datos-personales/datos-pers
 import {MatSelectModule} from '@angular/material/select';
 import { CategoriasComponent } from './register/categorias/categorias.component'; 
 import {MatTabsModule} from '@angular/material/tabs';
+import { FinComponent } from './register/fin/fin.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import {MatTabsModule} from '@angular/material/tabs';
     StepperComponent,
     DatosPersonalesComponent,
     CategoriasComponent,
+    FinComponent,
   ],
   imports: [
     BrowserModule,
