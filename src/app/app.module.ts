@@ -1,57 +1,40 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 
 import { SigninComponent } from './login/signin/signin.component';
 import { SignupComponent } from './login/signup/signup.component';
-import { SharedModule } from './shared/shared.module';
-import { GraficaComponent } from './components/grafica/grafica.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LadingComponent } from './ladingPage/lading/lading.component';
-import { StepperComponent } from './register/stepper/stepper.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {MatStepperModule} from '@angular/material/stepper';
-import {FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
-import {MatIconModule} from '@angular/material/icon';
-import { DatosPersonalesComponent } from './register/datos-personales/datos-personales.component';
-import {MatSelectModule} from '@angular/material/select';
-import { CategoriasComponent } from './register/categorias/categorias.component'; 
-import {MatTabsModule} from '@angular/material/tabs';
-import { FinComponent } from './register/fin/fin.component';
+import { AppRoutingModule } from './app-routing.module';
+
+import {FormsModule , ReactiveFormsModule} from '@angular/forms';
+//Modulo Shared
+import { SharedModule } from './shared/shared.module';
+
+//Modulo Register
+import { RegisterModule } from './register/register.module';
+
+//Modulo Pages
+import { PagesModule } from './pages/pages.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     SigninComponent,
     SignupComponent,
-    GraficaComponent,
-    DashboardComponent,
     LadingComponent,
-    StepperComponent,
-    DatosPersonalesComponent,
-    CategoriasComponent,
-    FinComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SharedModule,
     BrowserAnimationsModule,
-    MatStepperModule,
+    RegisterModule,
+    PagesModule,
     FormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    ReactiveFormsModule,
-    MatButtonModule,
-    MatIconModule,
-    MatSelectModule,
-    MatTabsModule
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

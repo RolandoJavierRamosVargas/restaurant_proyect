@@ -10,9 +10,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 @NgModule({
   declarations: [
     BreadcrumbsComponent,
-    FooterComponent,
     HeaderComponent,
-    NopagefoundComponent,
     SidebarComponent
   ],
   imports: [
@@ -20,9 +18,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
   ],
   exports: [
     BreadcrumbsComponent,
-    FooterComponent,
     HeaderComponent,
-    NopagefoundComponent,
     SidebarComponent
   ]
 })
