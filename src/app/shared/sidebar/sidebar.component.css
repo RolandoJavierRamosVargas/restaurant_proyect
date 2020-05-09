@@ -1,0 +1,8 @@
+li.active,
+a.active{
+    background: #242A33!important;
+}
+
+.sidebar-nav ul li a.active{
+    color:#687384;
+}

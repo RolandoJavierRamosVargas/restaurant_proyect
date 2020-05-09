@@ -1,4 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
+
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
@@ -7,7 +9,7 @@ import { SigninComponent } from './login/signin/signin.component';
 import { SignupComponent } from './login/signup/signup.component';
 import { LadingComponent } from './ladingPage/lading/lading.component';
 
-import { AppRoutingModule } from './app-routing.module';
+import { APP_ROUTES } from './app-routing.module';
 
 import {FormsModule , ReactiveFormsModule} from '@angular/forms';
 //Modulo Shared
@@ -28,13 +30,14 @@ import { PagesModule } from './pages/pages.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    APP_ROUTES,
     SharedModule,
     BrowserAnimationsModule,
     RegisterModule,
     PagesModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

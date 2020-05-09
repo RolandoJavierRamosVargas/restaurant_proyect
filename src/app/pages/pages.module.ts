@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { PagesRoutingModule } from './pages-routing.module';
+import { PAGES_ROUTE } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
 import { SharedModule } from '../shared/shared.module';
 import { GraficaComponent } from '../components/grafica/grafica.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -13,8 +14,9 @@ import { GraficaComponent } from '../components/grafica/grafica.component';
     GraficaComponent
   ],
   imports: [
+    RouterModule,
     SharedModule,
-    PagesRoutingModule,
+    PAGES_ROUTE,
   ],
   exports : [
     PagesComponent,

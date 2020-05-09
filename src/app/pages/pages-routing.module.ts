@@ -4,7 +4,7 @@ import { DashboardComponent } from './dashboard/dashboard.component'
 import { PagesComponent } from './pages.component';
 import { GraficaComponent } from '../components/grafica/grafica.component';
 
-const routes: Routes = [
+const pagesRoute: Routes = [
   {
     path:'',
     component:PagesComponent,
@@ -16,12 +16,6 @@ const routes: Routes = [
 }
 ];
 
-@NgModule({
-    imports: [
-        RouterModule.forChild(routes)
-    ],
-    exports: [
-        RouterModule
-    ]
-})
-export class PagesRoutingModule { }
+export const PAGES_ROUTE=RouterModule.forChild(pagesRoute);
+
+
